@@ -1,27 +1,32 @@
+import axios from "axios";
 import React from "react";
+import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { setBooks } from "./actions/books";
 
 function App(props) {
-	const { book } = props.books;
-	const { setBooks } = props;
-	console.log(props);
-	const newBooks = [
-		{
-			id: 0,
-			title: "asdfadsf",
-		},
-	];
+	useEffect(() => {
+		const { setBooks } = props;
+		axios.get("/books.json").then(({ data }) => {
+			setBooks(data);
+		});
+	}, []);
+
+	const { books, isReady } = props;
 	return (
-		<div className="App">
-			{book[0].title}
-			<button onClick={setBooks.bind(this, newBooks)}>dafsdfsdf</button>
-		</div>
+		<ul>
+			{!isReady
+				? "Загрузка..."
+				: books.map((item) => {
+						return <li>{item.title}</li>;
+				  })}
+		</ul>
 	);
 }
 
-const mapStateToProps = (state) => ({
-	...state,
+const mapStateToProps = ({ books }) => ({
+	books: books.item,
+	isReady: books.isReady,
 });
 const mapDispatchToProps = (dispatch) => ({
 	setBooks: (books) => dispatch(setBooks(books)),
