@@ -18,6 +18,21 @@
 	}
 }
 
+// content=================================================
+.content {
+	&__inner {
+		display: flex;
+	}
+	&__left {
+		width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__right {
+		width: 20%;
+	}
+}
+
 // items=================================================
 .items {
 	display: flex;
@@ -45,5 +60,31 @@
 
 	&__price {
 		margin-top: 5px;
+	}
+}
+
+// sidebar================================================
+.sidebar {
+	margin-top: 13px;
+	border: 1px solid silver;
+	&__filter {
+		display: flex;
+		flex-direction: column;
+
+		span {
+			padding: 10px;
+			background-color: snow;
+			border-bottom: 1px solid #000;
+			transition: 0.3s all ease;
+			cursor: pointer;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&:hover {
+				background-color: tomato;
+			}
+		}
 	}
 }

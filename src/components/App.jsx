@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import Menu from "./Menu";
-import BookCard from "./BookCard";
+import Content from "./Content";
 
 function App(props) {
 	useEffect(() => {
@@ -12,17 +12,10 @@ function App(props) {
 		});
 	}, []);
 
-	const { books, isReady } = props;
 	return (
 		<div>
 			<Menu />
-			<div className="items container">
-				{!isReady
-					? "Загрузка..."
-					: books.map((item, index) => {
-							return <BookCard key={index} {...item} />;
-					  })}
-			</div>
+			<Content {...props} />
 		</div>
 	);
 }
