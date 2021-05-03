@@ -9,7 +9,7 @@ const CartItems = ({ id, title, price, image, author, removeToCart }) => {
 				<h6>{author}</h6>
 				<h5>{price} сомов</h5>
 			</div>
-			<button onClick={removeToCart.bind(this, id)}>del</button>
+			<button onClick={removeToCart.bind(this, id)}>X</button>
 		</div>
 	);
 };

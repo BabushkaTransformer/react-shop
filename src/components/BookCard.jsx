@@ -14,7 +14,7 @@ const BookCard = (book) => {
 					{/* author */}
 					<h4 className="card__author">{author}</h4>
 					{/* price */}
-					<div className="card__price">{price}</div>
+					<div className="card__price">{price} сом</div>
 					{/* button */}
 					<button onClick={addToCart.bind(this, book)} className="card__button">
 						Добавить в корзину {addedCount > 0 && `(${addedCount})`}
