@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
-import Menu from "./Menu";
+import Menu from "../containers/Menu";
 import Content from "./Content";
 
 function App(props) {

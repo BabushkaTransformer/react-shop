@@ -1,6 +1,6 @@
 import React from "react";
-import BookCard from "./BookCard";
-import Filter from "../containers/filter";
+import BookCard from "../containers/BookCard";
+import Filter from "../containers/Filter";
 
 const Content = ({ books, isReady }) => {
 	return (

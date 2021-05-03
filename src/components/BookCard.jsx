@@ -1,6 +1,7 @@
 import React from "react";
 
-const BookCard = ({ title, author, price, image }) => {
+const BookCard = (book) => {
+	const { title, author, price, image, addToCart, addedCount } = book;
 	return (
 		<div className="card">
 			<div className="card__inner">
@@ -14,6 +15,10 @@ const BookCard = ({ title, author, price, image }) => {
 					<h4 className="card__author">{author}</h4>
 					{/* price */}
 					<div className="card__price">{price}</div>
+					{/* button */}
+					<button onClick={addToCart.bind(this, book)} className="card__button">
+						Добавить в корзину {addedCount > 0 && `(${addedCount})`}
+					</button>
 				</div>
 			</div>
 		</div>

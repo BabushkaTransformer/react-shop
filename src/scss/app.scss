@@ -40,6 +40,7 @@
 }
 
 .card {
+	position: relative;
 	width: calc(25% - 10px);
 	margin: 5px;
 	padding: 8px;
@@ -60,6 +61,60 @@
 
 	&__price {
 		margin-top: 5px;
+		margin-bottom: 20px;
+	}
+
+	&__button {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+// cart============================================
+.cart {
+	position: relative;
+
+	z-index: 10;
+
+	&:hover {
+		.cart__hidden {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__hidden {
+		width: 330px;
+
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: azure;
+	}
+
+	&__item {
+		padding: 5px 10px;
+		display: flex;
+		align-items: center;
+		height: 90px;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+		button {
+			padding: 3px;
+			margin-left: auto;
+		}
+	}
+
+	&__desc {
+		padding: 0 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100%;
 	}
 }
 
@@ -67,6 +122,8 @@
 .sidebar {
 	margin-top: 13px;
 	border: 1px solid silver;
+
+	// filter
 	&__filter {
 		display: flex;
 		flex-direction: column;
@@ -78,13 +135,20 @@
 			transition: 0.3s all ease;
 			cursor: pointer;
 
-			&:last-child {
-				border-bottom: none;
-			}
-
 			&:hover {
 				background-color: tomato;
 			}
+		}
+	}
+
+	// input
+	&__input {
+		padding-top: 20px;
+		width: 100%;
+
+		input {
+			width: 100%;
+			padding: 5px;
 		}
 	}
 }

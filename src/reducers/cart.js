@@ -4,15 +4,15 @@ const initialState = {
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case "ADD_BOOK":
+		case "ADD_TO_CART":
 			return {
 				...state,
-				item: [...state.item, action.payload],
+				items: [...state.items, action.payload],
 			};
-		case "REMOVE_BOOK":
+		case "REMOVE_FROM_CART":
 			return {
 				...state,
-				item: state.items.filter((el) => el.id !== action.payload),
+				items: state.items.filter((el) => el.id !== action.payload),
 			};
 		default:
 			return state;

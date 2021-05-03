@@ -19,8 +19,20 @@ const sortBy = (books, filterBy) => {
 	}
 };
 
-const mapStateToProps = ({ books }) => ({
-	books: sortBy(books.item, books.filterBy),
+const filterBooks = (books, searchQuery) => {
+	return books.filter(
+		(el) =>
+			el.title.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0 ||
+			el.author.toLowerCase().indexOf(searchQuery.toLowerCase()) >= 0
+	);
+};
+
+const searchBooks = (books, filterBy, searchQuery) => {
+	return sortBy(filterBooks(books, searchQuery), filterBy);
+};
+
+const mapStateToProps = ({ books, filter }) => ({
+	books: books.item && searchBooks(books.item, filter.filterBy, filter.searchQuery),
 	isReady: books.isReady,
 });
 const mapDispatchToProps = (dispatch) => ({
