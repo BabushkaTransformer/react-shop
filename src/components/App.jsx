@@ -7,10 +7,14 @@ import Content from "./Content";
 function App(props) {
 	useEffect(() => {
 		const { setBooks } = props;
-		axios.get("/books.json").then(({ data }) => {
+		axios.get("./books.json").then(({ data }) => {
 			setBooks(data);
 		});
 	}, []);
+
+	const stupitGit = () => {
+		return "whyDontAdded";
+	};
 
 	return (
 		<div>
