@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-shop/static/css/main.2c86a493.chunk.css",
+    "main.js": "/react-shop/static/js/main.fe23a90f.chunk.js",
+    "main.js.map": "/react-shop/static/js/main.fe23a90f.chunk.js.map",
+    "runtime-main.js": "/react-shop/static/js/runtime-main.e598ee8f.js",
+    "runtime-main.js.map": "/react-shop/static/js/runtime-main.e598ee8f.js.map",
+    "static/js/2.507c8fb7.chunk.js": "/react-shop/static/js/2.507c8fb7.chunk.js",
+    "static/js/2.507c8fb7.chunk.js.map": "/react-shop/static/js/2.507c8fb7.chunk.js.map",
+    "index.html": "/react-shop/index.html",
+    "precache-manifest.f252594f6312b3f71dbd58c0ffb10721.js": "/react-shop/precache-manifest.f252594f6312b3f71dbd58c0ffb10721.js",
+    "service-worker.js": "/react-shop/service-worker.js",
+    "static/css/main.2c86a493.chunk.css.map": "/react-shop/static/css/main.2c86a493.chunk.css.map",
+    "static/js/2.507c8fb7.chunk.js.LICENSE.txt": "/react-shop/static/js/2.507c8fb7.chunk.js.LICENSE.txt",
+    "static/media/cart.svg": "/react-shop/static/media/cart.11883816.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e598ee8f.js",
+    "static/js/2.507c8fb7.chunk.js",
+    "static/css/main.2c86a493.chunk.css",
+    "static/js/main.fe23a90f.chunk.js"
+  ]
+}
