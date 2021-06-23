@@ -7,17 +7,13 @@ import Content from "./Content";
 function App(props) {
 	useEffect(() => {
 		const { setBooks } = props;
-		axios.get("./books.json").then(({ data }) => {
+		axios.get("react-shop/books.json").then(({ data }) => {
 			setBooks(data);
 		});
 	}, []);
 
-	const stupitGit = () => {
-		return "whyDontAdded";
-	};
-
 	return (
-		<div>
+		<div className="page">
 			<Menu />
 			<Content {...props} />
 		</div>

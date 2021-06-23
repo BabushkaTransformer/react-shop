@@ -8,22 +8,27 @@ const Filter = ({ setFilter, filterBy, searchQuery, setSearchQuery }) => {
 		<div className="sidebar">
 			{/* filter */}
 			<div className="sidebar__filter">
-				<span name="all" active={filterBy === "all"} onClick={handlerItemClick}>
+				<span name="all" onClick={handlerItemClick}>
 					Все
 				</span>
-				<span name="author" active={filterBy === "author"} onClick={handlerItemClick}>
+				<span name="author" onClick={handlerItemClick}>
 					Автор
 				</span>
-				<span name="high_price" active={filterBy === "high_price"} onClick={handlerItemClick}>
+				<span name="high_price" onClick={handlerItemClick}>
 					Цена(по убыванию)
 				</span>
-				<span name="low_price" active={filterBy === "low_price"} onClick={handlerItemClick}>
+				<span name="low_price" onClick={handlerItemClick}>
 					Цена (по возрастанию)
 				</span>
 			</div>
 			{/* input */}
 			<div className="sidebar__input">
-				<input type="text" onChange={(e) => setSearchQuery(e.target.value)} value={searchQuery} placeholder="Поиск" />
+				<input
+					type="text"
+					onChange={(e) => setSearchQuery(e.target.value)}
+					value={searchQuery}
+					placeholder="Поиск"
+				/>
 			</div>
 		</div>
 	);
